@@ -62,7 +62,7 @@ def _fake_plan_path(sites,start_site,goal_site,risk,velocities,duration_type,age
     if duration_type=='uncontrollable_bounded':
         duration_dict={'ctype':'uncontrollable_bounded',
                        'lb':lb_duration,'ub':ub_duration}
-    elif duration_type=='uniform':
+    elif duration_type in ['uniform','uncontrollable_probabilistic']:
         duration_dict={'ctype':'uncontrollable_probabilistic',
                        'distribution':{'type':'uniform','lb':lb_duration,'ub':ub_duration}}
     elif duration_type=='gaussian':
